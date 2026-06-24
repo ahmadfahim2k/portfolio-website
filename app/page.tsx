@@ -148,7 +148,7 @@ export default function HomePage() {
           <div className="card text-center py-14">
             <p className="section-label justify-center flex">Contact</p>
             <h2 className="text-3xl font-black tracking-tight text-stone-900 dark:text-white mt-1 mb-3">
-              Let's work together
+              Let&apos;s work together
             </h2>
             <p className="text-stone-500 dark:text-stone-400 text-base mb-8">
               Open to collaborations, research opportunities, and interesting conversations.
