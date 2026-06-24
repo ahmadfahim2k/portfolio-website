@@ -10,7 +10,7 @@ import DarkModeToggle from "./DarkModeToggle";
 const navLinks = [
   { href: "/", label: "About" },
   { href: "/projects", label: "Projects" },
-  { href: "/experience", label: "Experience" },
+  { href: "/background", label: "Background" },
 ];
 
 export default function MobileHeader() {

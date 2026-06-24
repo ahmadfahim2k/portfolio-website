@@ -1,16 +1,29 @@
 import { getAllExperience } from "@/lib/mdx";
 import FadeIn from "@/components/FadeIn";
 import type { Metadata } from "next";
+import type { ExperienceFrontmatter } from "@/lib/mdx";
 
-export const metadata: Metadata = { title: "Experience" };
+function CompanyLink({ fm }: { fm: ExperienceFrontmatter }) {
+  if (fm.companyUrl) {
+    return (
+      <a href={fm.companyUrl} target="_blank" rel="noopener noreferrer"
+        className="text-sm text-accent hover:underline mb-2 inline-block">
+        {fm.company} ↗
+      </a>
+    );
+  }
+  return <p className="text-sm text-accent mb-2">{fm.company}</p>;
+}
 
-export default function ExperiencePage() {
+export const metadata: Metadata = { title: "Background" };
+
+export default function BackgroundPage() {
   const experience = getAllExperience();
   const work = experience.filter((e) => e.frontmatter.type === "work");
   const education = experience.filter((e) => e.frontmatter.type === "education");
 
   return (
-    <div className="max-w-2xl mx-auto px-6 py-14 lg:py-16 space-y-14">
+    <div className="px-10 lg:px-16 py-14 lg:py-12 space-y-14">
       {/* Work */}
       <section>
         <FadeIn>
@@ -30,7 +43,7 @@ export default function ExperiencePage() {
                 <h2 className="font-bold text-stone-900 dark:text-white">
                   {item.frontmatter.title}
                 </h2>
-                <p className="text-sm text-accent mb-2">{item.frontmatter.company}</p>
+                <CompanyLink fm={item.frontmatter} />
                 <p className="text-sm text-stone-500 dark:text-stone-400 leading-relaxed">
                   {item.content.trim()}
                 </p>
@@ -45,7 +58,7 @@ export default function ExperiencePage() {
         <section>
           <FadeIn>
             <p className="section-label">Academic</p>
-            <h2 className="text-2xl font-black tracking-tight text-stone-900 dark:text-white mt-1 mb-8">
+            <h2 className="text-3xl font-black tracking-tight text-stone-900 dark:text-white mt-1 mb-8">
               Education
             </h2>
           </FadeIn>
@@ -60,7 +73,7 @@ export default function ExperiencePage() {
                   <h3 className="font-bold text-stone-900 dark:text-white">
                     {item.frontmatter.title}
                   </h3>
-                  <p className="text-sm text-accent mb-2">{item.frontmatter.company}</p>
+                  <CompanyLink fm={item.frontmatter} />
                   <p className="text-sm text-stone-500 dark:text-stone-400 leading-relaxed">
                     {item.content.trim()}
                   </p>

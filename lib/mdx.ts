@@ -29,8 +29,10 @@ export type ProjectFrontmatter = {
   tags: string[];
   github?: string;
   demo?: string;
+  live?: string;
   paper?: string;
   image?: string;
+  screenshots?: string[];
   featured?: boolean;
 };
 
@@ -68,6 +70,7 @@ export function getProjectBySlug(slug: string): Project | undefined {
 export type ExperienceFrontmatter = {
   title: string;
   company: string;
+  companyUrl?: string;
   period: string;
   type: "work" | "education";
   current?: boolean;
@@ -80,8 +83,8 @@ export type Experience = {
 };
 
 export function getAllExperience(): Experience[] {
-  return getFiles("experience")
-    .map((f) => readFile("experience", f) as Experience)
+  return getFiles("background")
+    .map((f) => readFile("background", f) as Experience)
     .sort((a, b) => {
       // current items first, then by filename (prefixed with order number)
       if (a.frontmatter.current) return -1;

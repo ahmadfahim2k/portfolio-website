@@ -9,7 +9,7 @@ export default function ProjectsPage() {
   const projects = getAllProjects();
 
   return (
-    <div className="max-w-3xl mx-auto px-6 py-14 lg:py-16">
+    <div className="px-10 lg:px-16 py-14 lg:py-12">
       <FadeIn>
         <p className="section-label">Work</p>
         <h1 className="text-3xl font-black tracking-tight text-stone-900 dark:text-white mt-1 mb-2">

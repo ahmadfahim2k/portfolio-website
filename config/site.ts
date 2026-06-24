@@ -2,8 +2,8 @@ export const siteConfig = {
   // ── Identity ──────────────────────────────────────
   name: "Ahmad Fahim",
   title: "Data Scientist & AI Engineer",
-  tagline: "Building AI that solves problems that actually matter.",
-  bio: "Data Science and AI specialist with 3+ years of software engineering experience in the healthcare and pharmaceutical domain. I build end-to-end ML systems, RAG pipelines, and LLM-powered applications — from messy data to deployed, usable products.",
+  tagline: "Finding meaning in data, in domains that matter.",
+  bio: "Data Science and AI specialist with 3+ years of software engineering experience in the healthcare and pharmaceutical domain. I build end-to-end ML systems, RAG pipelines, and LLM-powered applications. From messy data to deployed, usable products.",
 
   // ── Contact & Social ──────────────────────────────
   email: "ahmadfahim2k@gmail.com",
