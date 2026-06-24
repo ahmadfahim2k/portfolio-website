@@ -20,7 +20,7 @@ export const siteConfig = {
   resumeUrl: "/resume.pdf",
 
   // ── SEO ───────────────────────────────────────────
-  siteUrl: "https://yoursite.vercel.app",
+  siteUrl: "https://portfolio-self-pi-31.vercel.app/",
   description:
     "Portfolio of Ahmad Fahim — Data Scientist and AI Engineer specialising in machine learning, NLP, RAG pipelines, and full-stack AI applications.",
 };
