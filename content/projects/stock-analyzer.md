@@ -18,7 +18,7 @@ screenshots:
 
 ## Overview
 
-A full-stack financial analysis tool built as a group project for COMP530 at the University of Liverpool. Users select a crisis period — the Dot-Com crash, the 2008 Financial Crisis, or COVID-19 — and a stock ticker, then view OHLC price charts, computed risk and return metrics, and an LLM-generated narrative summary. A separate sector view aggregates yearly performance across all 11 GICS sectors.
+A full-stack financial analysis tool built as a group project for COMP530 as part of my masters at the University of Liverpool. Users select a crisis period, which can be either the Dot-Com crash, the 2008 Financial Crisis, COVID-19, or a custom time period, and a stock ticker, then view OHLC price charts, computed risk and return metrics, and an LLM-generated narrative summary. A separate sector view aggregates yearly performance across all 11 GICS sectors.
 
 ## Approach
 
@@ -30,4 +30,6 @@ A fully functional application covering 3,158 tickers across five decades of mar
 
 ## What I learned
 
-Building a full-stack application in a team reinforced the importance of clear API contracts between frontend and backend. Integrating LLM-generated outputs alongside computed metrics showed how generative AI can complement rather than replace quantitative analysis.
+Building a full-stack application in a team reinforced the importance of clear API contracts between frontend and backend. When multiple people are working across different layers of the stack simultaneously, agreeing on the Architecture design early prevents a lot of friction later. Version control discipline and regular communication via meetings became more important than the code itself.
+
+Working with five decades of financial data across thousands of tickers also highlighted the importance of data cleaning and preprocessing as a foundational step. The quality of the analysis was entirely dependent on the quality of the pipeline that produced the data, which reinforced how much of real data science work happens before any modelling or visualisation begins. Furthermore, integrating LLM-generated outputs alongside computed metrics also showed how generative AI can complement rather than replace quantitative analysis.
