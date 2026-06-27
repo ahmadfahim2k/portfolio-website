@@ -7,12 +7,12 @@ function CompanyLink({ fm }: { fm: ExperienceFrontmatter }) {
   if (fm.companyUrl) {
     return (
       <a href={fm.companyUrl} target="_blank" rel="noopener noreferrer"
-        className="text-sm text-accent hover:underline mb-2 inline-block">
+        className="text-lg text-accent hover:underline mb-2 inline-block">
         {fm.company} ↗
       </a>
     );
   }
-  return <p className="text-sm text-accent mb-2">{fm.company}</p>;
+  return <p className="text-lg text-accent mb-2">{fm.company}</p>;
 }
 
 export const metadata: Metadata = { title: "Background" };
@@ -40,11 +40,11 @@ export default function BackgroundPage() {
                 <p className="text-xs font-bold tracking-wide text-accent uppercase mb-0.5">
                   {item.frontmatter.period}
                 </p>
-                <h2 className="font-bold text-stone-900 dark:text-white">
+                <h2 className="text-2xl font-bold text-stone-900 dark:text-white">
                   {item.frontmatter.title}
                 </h2>
                 <CompanyLink fm={item.frontmatter} />
-                <p className="text-sm text-stone-500 dark:text-stone-400 leading-relaxed">
+                <p className="text-lg text-stone-500 dark:text-stone-400 leading-relaxed">
                   {item.content.trim()}
                 </p>
               </div>
@@ -70,11 +70,19 @@ export default function BackgroundPage() {
                   <p className="text-xs font-bold tracking-wide text-stone-400 uppercase mb-0.5">
                     {item.frontmatter.period}
                   </p>
-                  <h3 className="font-bold text-stone-900 dark:text-white">
+                  <h3 className="text-2xl font-bold text-stone-900 dark:text-white">
                     {item.frontmatter.title}
                   </h3>
                   <CompanyLink fm={item.frontmatter} />
-                  <p className="text-sm text-stone-500 dark:text-stone-400 leading-relaxed">
+                  {item.frontmatter.grade && (
+                    <p className="text-lg font-medium text-stone-500 dark:text-stone-400 mb-2">
+                      Grade:{" "}
+                      <span className="text-stone-700 dark:text-stone-200">
+                        {item.frontmatter.grade}
+                      </span>
+                    </p>
+                  )}
+                  <p className="text-lg text-stone-500 dark:text-stone-400 leading-relaxed">
                     {item.content.trim()}
                   </p>
                 </div>

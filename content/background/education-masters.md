@@ -4,6 +4,7 @@ company: "University of Liverpool"
 companyUrl: "https://www.liverpool.ac.uk/"
 period: "2025 – 2026"
 type: "education"
+grade: "84 / 100 in Semester 1"
 current: true
 ---
 

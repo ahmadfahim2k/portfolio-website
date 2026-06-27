@@ -46,7 +46,7 @@ export default function Sidebar() {
   const pathname = usePathname();
 
   return (
-    <aside className="fixed top-0 left-0 h-screen w-[280px] flex flex-col border-r border-stone-200 dark:border-stone-800 bg-white dark:bg-stone-950 overflow-y-auto z-40">
+    <aside className="fixed top-0 left-0 h-screen w-[330px] flex flex-col border-r border-stone-200 dark:border-stone-800 bg-white dark:bg-stone-950 overflow-y-auto z-40">
       {/* Profile */}
       <div className="flex flex-col items-center text-center px-6 pt-10 pb-6 select-none">
         <div className="relative w-24 h-24 rounded-full overflow-hidden bg-stone-100 dark:bg-stone-800 mb-4 ring-2 ring-accent/30">
