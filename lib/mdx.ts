@@ -74,6 +74,7 @@ export type ExperienceFrontmatter = {
   period: string;
   type: "work" | "education";
   current?: boolean;
+  grade?: string;
 };
 
 export type Experience = {
