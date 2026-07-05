@@ -19,6 +19,12 @@ export const metadata: Metadata = {
     description: siteConfig.description,
     url: siteConfig.siteUrl,
     type: "website",
+    images: [
+      {
+        url: `${siteConfig.siteUrl}/og-image.png`,
+        alt: siteConfig.name,
+      },
+    ],
   },
 };
 
