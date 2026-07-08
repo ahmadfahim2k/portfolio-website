@@ -11,6 +11,7 @@ const navLinks = [
   { href: "/", label: "About" },
   { href: "/projects", label: "Projects" },
   { href: "/background", label: "Background" },
+  { href: "/certifications", label: "Certifications" },
 ];
 
 export default function MobileHeader() {
