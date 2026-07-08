@@ -15,6 +15,10 @@
     @apply bg-stone-50 text-stone-800 antialiased;
   }
 
+  p {
+    text-align: justify;
+  }
+
   .dark body {
     @apply bg-[#0a0a0f] text-stone-200;
   }
