@@ -79,6 +79,7 @@ export type CertificationFrontmatter = {
 export type Certification = {
   slug: string;
   frontmatter: CertificationFrontmatter;
+  content: string;
 };
 
 export function getAllCertifications(): Certification[] {
