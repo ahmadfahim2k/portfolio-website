@@ -65,6 +65,41 @@ export function getProjectBySlug(slug: string): Project | undefined {
   return readFile("projects", file) as Project;
 }
 
+// ── Certifications ────────────────────────────────────────────────────────────
+
+export type CertificationFrontmatter = {
+  title: string;
+  org: string;
+  date: string;
+  image?: string;
+  link?: string;
+  featured?: boolean;
+};
+
+export type Certification = {
+  slug: string;
+  frontmatter: CertificationFrontmatter;
+};
+
+export function getAllCertifications(): Certification[] {
+  return getFiles("certifications")
+    .map((f) => readFile("certifications", f) as Certification)
+    .sort((a, b) => b.frontmatter.date.localeCompare(a.frontmatter.date));
+}
+
+export function getFeaturedCertifications(n = 3): Certification[] {
+  return getAllCertifications()
+    .filter((c) => c.frontmatter.featured)
+    .slice(0, n);
+}
+
+export function getCertificationBySlug(slug: string): Certification | undefined {
+  const files = getFiles("certifications");
+  const file = files.find((f) => f.replace(/\.mdx?$/, "") === slug);
+  if (!file) return undefined;
+  return readFile("certifications", file) as Certification;
+}
+
 // ── Experience ────────────────────────────────────────────────────────────────
 
 export type ExperienceFrontmatter = {

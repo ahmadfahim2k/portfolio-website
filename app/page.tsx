@@ -3,6 +3,7 @@ import AboutSection from "@/components/sections/AboutSection";
 import FeaturedProjectsSection from "@/components/sections/FeaturedProjectsSection";
 import ExperienceSection from "@/components/sections/ExperienceSection";
 import EducationSection from "@/components/sections/EducationSection";
+import CertificationsSection from "@/components/sections/CertificationsSection";
 import ContactSection from "@/components/sections/ContactSection";
 
 export default function HomePage() {
@@ -12,6 +13,7 @@ export default function HomePage() {
       <FeaturedProjectsSection />
       <ExperienceSection />
       <EducationSection />
+      <CertificationsSection />
       <ContactSection />
 
       <footer className="!mt-8 pt-4 pb-2 text-center text-sm text-stone-400 dark:text-stone-600">
