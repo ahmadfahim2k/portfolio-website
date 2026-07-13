@@ -2,7 +2,7 @@
 title: "Stock Analyzer: Financial Crisis Analysis Tool"
 description: "A full-stack web application for analysing US equity performance across major historical financial crises."
 date: "2025-01-01"
-tags: ["Python", "FastAPI", "Next.js", "TypeScript", "Recharts", "Groq", "Docker", "Azure", "Pandas"]
+tags: ["Python", "FastAPI", "Next.js", "TypeScript", "Recharts", "Groq", "Docker", "Azure", "CI/CD", "Pandas"]
 github: "https://github.com/ahmadfahim2k/stock-analyzer-group-project"
 live: "https://stock-analyzer-frontend.calmground-828190d8.francecentral.azurecontainerapps.io/"
 demo: ""
@@ -33,6 +33,8 @@ A fully functional application covering 3,158 tickers across five decades of mar
 
 To move beyond local development, I deployed the application to **Azure Container Apps**, running the backend and frontend as two independently scalable containerised services within a shared Container Apps environment. This involved provisioning an Azure Container Registry, building and pushing separate production images for each service, configuring external ingress for the frontend and internal-only ingress for the backend, and managing secrets and environment variables (including the LLM API key and CORS configuration) directly within Azure. Along the way, I resolved a regional capacity restriction on my Azure subscription and an RBAC-related authentication issue between the registry and the container apps, gaining hands-on experience with Azure's networking, identity, and container orchestration model in the process.
 
+I also set up a **CI pipeline with GitHub Actions** that builds and validates both the backend and frontend Docker images on every push, including a dependency install, a frontend lint check, and a backend smoke import test. Full deployment automation to Azure was out of scope, since my university's Azure tenant restricts students from creating the app registrations needed for GitHub Actions to authenticate against Azure, so the final deployment step remains manual. The CI pipeline has already proven its value in practice: it caught a frontend build failure before it reached production, which I fixed and redeployed only once the pipeline confirmed the build was sound.
+
 ## What I learned
 
 Building a full-stack application in a team reinforced the importance of clear API contracts between frontend and backend. When multiple people are working across different layers of the stack simultaneously, agreeing on the architecture design early prevents a lot of friction later. Version control discipline and regular communication via meetings became more important than the code itself.
@@ -40,3 +42,5 @@ Building a full-stack application in a team reinforced the importance of clear A
 Working with five decades of financial data across thousands of tickers also highlighted the importance of data cleaning and preprocessing as a foundational step. The quality of the analysis was entirely dependent on the quality of the pipeline that produced the data, which reinforced how much of real data science work happens before any modelling or visualisation begins. Furthermore, integrating LLM-generated outputs alongside computed metrics also showed how generative AI can complement rather than replace quantitative analysis.
 
 Deploying the application to Azure afterwards reinforced a different lesson: that moving from a local Docker Compose setup to a real cloud environment introduces its own class of problems, authentication, networking, ingress configuration, that don't show up at all in local development. Troubleshooting these issues gave me a much more concrete understanding of what "cloud deployment" actually involves beyond the certification syllabus.
+
+Setting up CI on top of that added a final piece: the difference between infrastructure that works and infrastructure that stays reliable as the codebase changes. Having the pipeline catch a real build failure before deployment made that distinction concrete rather than theoretical.
