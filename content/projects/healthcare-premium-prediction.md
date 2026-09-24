@@ -7,11 +7,10 @@ github: "https://github.com/ahmadfahim2k/ml-project-healthcare-premium"
 live: "https://ml-project-healthcare-premium-mwtlnfypcappvwnwzeaqpmy.streamlit.app/"
 demo: ""
 paper: ""
-image: ""
 featured: true
 screenshots:
-  - "/images/projects/hpp-1.png"
-  - "/images/projects/hpp-2.png"
+  - "/images/projects/healthcare-premium-prediction/1.png"
+  - "/images/projects/healthcare-premium-prediction/2.png"
 ---
 
 ## Overview

@@ -28,17 +28,10 @@ export default function ProjectPage({ params }: Props) {
       {/* Back */}
       <Link
         href="/projects"
-        className="inline-flex items-center gap-1.5 text-base text-stone-400 hover:text-stone-700 dark:hover:text-stone-200 transition-colors mb-8"
+        className="inline-flex items-center gap-1.5 text-base text-stone-400 hover:text-stone-700 dark:hover:text-stone-200 transition-colors mb-6"
       >
         ← All projects
       </Link>
-
-      {/* Hero image */}
-      {fm.image && (
-        <div className="relative h-56 rounded-2xl overflow-hidden bg-stone-100 dark:bg-stone-800 mb-8">
-          <Image src={fm.image} alt={fm.title} fill className="object-cover" />
-        </div>
-      )}
 
       {/* Header */}
       <header className="mb-8">

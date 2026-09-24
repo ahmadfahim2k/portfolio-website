@@ -7,14 +7,14 @@ github: "https://github.com/ahmadfahim2k/stock-analyzer-group-project"
 live: "https://stock-analyzer-frontend.calmground-828190d8.francecentral.azurecontainerapps.io/"
 demo: ""
 paper: ""
-image: ""
 featured: true
+featuredOrder: 1
 screenshots:
-  - "/images/projects/sa-dashboard.png"
-  - "/images/projects/sa-pdf_page_1.png"
-  - "/images/projects/sa-pdf_page_2.png"
-  - "/images/projects/sa-pdf_page_3.png"
-  - "/images/projects/sa-sector-view.png"
+  - "/images/projects/stock-analyzer/sector-view.png"
+  - "/images/projects/stock-analyzer/dashboard.png"
+  - "/images/projects/stock-analyzer/pdf-page-1.png"
+  - "/images/projects/stock-analyzer/pdf-page-2.png"
+  - "/images/projects/stock-analyzer/pdf-page-3.png"
 ---
 
 ## Overview

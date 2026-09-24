@@ -7,12 +7,12 @@ github: "https://github.com/ahmadfahim2k/shoebot-genai"
 live: "shoebot-genai-mms8ehjedvkdvebneqnf9h.streamlit.app/"
 demo: ""
 paper: ""
-image: ""
 featured: true
+featuredOrder: 4
 screenshots:
-  - "/images/projects/sb-1.png"
-  - "/images/projects/sb-2.png"
-  - "/images/projects/sb-3.png"
+  - "/images/projects/shoebot/1.png"
+  - "/images/projects/shoebot/2.png"
+  - "/images/projects/shoebot/3.png"
 ---
 
 ## Overview

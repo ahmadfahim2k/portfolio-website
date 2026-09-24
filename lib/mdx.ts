@@ -31,9 +31,9 @@ export type ProjectFrontmatter = {
   demo?: string;
   live?: string;
   paper?: string;
-  image?: string;
   screenshots?: string[];
   featured?: boolean;
+  featuredOrder?: number;
 };
 
 export type Project = {
@@ -52,10 +52,14 @@ export function getAllProjects(): Project[] {
     );
 }
 
-export function getFeaturedProjects(n = 4): Project[] {
+export function getFeaturedProjects(): Project[] {
   return getAllProjects()
-    .filter((p) => p.frontmatter.featured)
-    .slice(0, n);
+    .filter((p) => p.frontmatter.featuredOrder != null)
+    .sort(
+      (a, b) =>
+        (a.frontmatter.featuredOrder ?? 999) -
+        (b.frontmatter.featuredOrder ?? 999)
+    );
 }
 
 export function getProjectBySlug(slug: string): Project | undefined {

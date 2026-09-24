@@ -20,7 +20,7 @@ export default function ProjectsPage() {
         </p>
       </FadeIn>
 
-      <div className="grid sm:grid-cols-2 gap-4">
+      <div className="grid sm:grid-cols-2 2xl:grid-cols-3 gap-4">
         {projects.map((project, i) => (
           <FadeIn key={project.slug} delay={0.05 * i}>
             <ProjectCard project={project} />

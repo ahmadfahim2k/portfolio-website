@@ -7,13 +7,13 @@ github: "https://github.com/ahmadfahim2k/dl-project-vehicle-damage-detection"
 live: "https://dl-project-vehicle-damage-detection-6bkv6g2fn74frrtqtku4km.streamlit.app/"
 demo: ""
 paper: ""
-image: ""
-screenshots:
-  - "/images/projects/vdp-1.png"
-  - "/images/projects/vdp-2.png"
-  - "/images/projects/vdp-3.png"
-  - "/images/projects/vdp-4.png"
 featured: true
+featuredOrder: 2
+screenshots:
+  - "/images/projects/vehicle-damage-prediction/1.png"
+  - "/images/projects/vehicle-damage-prediction/2.png"
+  - "/images/projects/vehicle-damage-prediction/3.png"
+  - "/images/projects/vehicle-damage-prediction/4.png"
 ---
 
 ## Overview

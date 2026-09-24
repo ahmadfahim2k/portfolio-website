@@ -7,12 +7,11 @@ github: "https://github.com/ahmadfahim2k/ml-project-credit-risk-model"
 live: "https://ml-project-credit-risk-model-azwasxdsvjbrqwtreerte.streamlit.app/"
 demo: ""
 paper: ""
-image: ""
 featured: false
 screenshots:
-  - "/images/projects/crm-1.png"
-  - "/images/projects/crm-2.png"
-  - "/images/projects/crm-3.png"
+  - "/images/projects/credit-risk-modelling/1.png"
+  - "/images/projects/credit-risk-modelling/2.png"
+  - "/images/projects/credit-risk-modelling/3.png"
 ---
 
 ## Overview

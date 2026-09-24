@@ -7,12 +7,11 @@ github: "https://github.com/ahmadfahim2k/genai-real-estate-assistant"
 live: "https://genai-real-estate-assistant-akha5ab4it59rgi9r74yjk.streamlit.app/"
 demo: ""
 paper: ""
-image: ""
 featured: false
 screenshots:
-  - "/images/projects/rea-1.png"
-  - "/images/projects/rea-2.png"
-  - "/images/projects/rea-3.png"
+  - "/images/projects/real-estate-assistant/1.png"
+  - "/images/projects/real-estate-assistant/2.png"
+  - "/images/projects/real-estate-assistant/3.png"
 ---
 
 ## Overview

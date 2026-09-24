@@ -6,18 +6,17 @@ import type { Project } from "@/lib/mdx";
 
 export default function ProjectCard({ project }: { project: Project }) {
   const { slug, frontmatter: fm } = project;
+  const thumbnail = `/images/projects/${slug}/thumbnail.webp`;
 
   return (
     <div className="card hover:border-accent/50 hover:-translate-y-1 transition-all duration-200 h-full flex flex-col group p-0 overflow-hidden">
 
       {/* ── Clickable upper area ── */}
       <Link href={`/projects/${slug}`} className="flex flex-col flex-1 p-6 pb-4">
-        {/* Image */}
-        {fm.image && (
-          <div className="relative h-40 rounded-xl overflow-hidden bg-stone-100 dark:bg-stone-800 mb-4">
-            <Image src={fm.image} alt={fm.title} fill className="object-cover" />
-          </div>
-        )}
+        {/* Thumbnail */}
+        <div className="relative aspect-[1200/630] rounded-xl overflow-hidden bg-stone-100 dark:bg-stone-800 mb-4">
+          <Image src={thumbnail} alt={fm.title} fill className="object-cover" />
+        </div>
 
         <h3 className="font-bold text-stone-900 dark:text-white text-base mb-1.5 group-hover:text-accent transition-colors">
           {fm.title}
